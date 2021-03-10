@@ -8,8 +8,13 @@
 
 /*COMMON*/
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .upgrade {
     text-align: right;
+    text-transform: uppercase;
     width: calc(100% - 220px);
     height: 70px;
     position: fixed;
@@ -17,6 +22,17 @@
     right: 0;
     color: white;
     background-color: rgba(0, 0, 0, 0.3);
+    
+}
+
+.upgrade span {
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 8px 25px;
+    line-height: 70px;
+    margin-right: 30px;
 }
 
 #app-wrapper {
