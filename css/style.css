@@ -8,6 +8,9 @@
 
 /*COMMON*/
 
+::-webkit-scrollbar {
+    background-color: black;
+}
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -62,40 +65,34 @@ main {
 }
 
 nav {
+    background-color: black;
     float: left;
     height: 100%;
     width: 220px;
     overflow: hidden;
     /* overflow-y: auto; */
-    /*TEST*/
-    background-color: crimson ;
+
+   
 }
 
 nav a {
-    color: white;
+    color: #a3a3a3 ;
     text-decoration: none;
 }
 
 .logo {
     height: 70px;
-    
-    /*TEST*/
-    background-color: deepskyblue;
+    display: flex;
+    flex-direction: row;
 }
 
 .logo img {
+    width: 100px;
     height: 50px;
     margin-top: 10px;
+    margin-left: 10px;
     padding: 10px 0;
-    
-    
-}
-
-.main-links {
-    
-    
-     /*TEST*/
-     background-color: pink;
+    justify-content: flex-start;
 }
 
 
@@ -122,20 +119,78 @@ nav a {
     flex-grow: 1;
     min-height: 100px;
     overflow: hidden;
-     /*TEST*/
-     background-color: peru;
-     
+    color: #a3a3a3;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
-.install {
-     /*TEST*/
-     background-color: yellowgreen;
+.playlist .create-playlist {
+    display: flex;
+    flex-direction: row;
 }
 
+.playlist h4 {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: white;
+    padding-left: 5px;
+}
+
+.playlist span {
+    font-size: 13px;
+    align-self: center;
+    padding-left: 5px;
+}
+
+.playlist i {
+    font-size: 30px;
+    padding: 5px;
+    color: #a3a3a3;
+}
+
+.install a {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.install img {
+    margin-left: 5px;
+    padding: 3px;
+    justify-content: flex-start;
+    height: 20px;
+    width: 20px;
+}
+
+.install span {
+    font-size: 11px;
+    align-self: center;
+    padding-left: 5px;
+    font-weight: 600;
+}
+
+.profile {
+    margin-left: 5px;
+    padding-top: 10px;
+    border-top: 1px solid #a3a3a3 ;
+}
+.profile i {
+    color: white;
+    font-size: 20px;
+}
+.profile span {
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+}
 .nuova-playlist {
     height: 100%;
     overflow-y: auto;
 
+}
+
+.nuova-playlist li {
+    padding: 7px 0;
 }
 
 /*Main Content*/
