@@ -8,6 +8,13 @@
 
 /*COMMON*/
 
+.small-wrapper {
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 ::-webkit-scrollbar {
     background-color: black;
 }
@@ -50,9 +57,13 @@ img {
     background-color: aquamarine;
 }
 
+.container-flex i {
+    color: white;
+}
+
 /*MAIN*/
 main {
-    height: calc(100% - 100px);
+    height: calc(100% - 85px);
     /*TEST*/
     background-color: chocolate;
 }
@@ -90,8 +101,8 @@ nav a {
     width: 100px;
     height: 50px;
     margin-top: 10px;
-    margin-left: 10px;
     padding: 10px 0;
+    margin-left: 10px;
     justify-content: flex-start;
 }
 
@@ -148,14 +159,16 @@ nav a {
     color: #a3a3a3;
 }
 
+.install {
+    align-content: flex-end;
+}
 .install a {
     display: flex;
     flex-direction: row;
-    
+    padding-left: 10px;
 }
 
 .install img {
-    margin-left: 5px;
     padding: 3px;
     justify-content: flex-start;
     height: 20px;
@@ -170,18 +183,22 @@ nav a {
 }
 
 .profile {
-    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
     padding-top: 10px;
+    padding-left: 10px;
     border-top: 1px solid #a3a3a3 ;
 }
-.profile i {
-    color: white;
-    font-size: 20px;
+
+.profile img {
+    background-color: #a3a3a3;
+    border-radius: 50%;
 }
 .profile span {
     color: white;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 11px;
+    align-self: center;
 }
 .nuova-playlist {
     height: 100%;
@@ -222,10 +239,134 @@ nav a {
 
 
 /*FOOTER*/
+
+/*COMMON*/
 footer {
-    height: 100px;
+    
+    height: 85px;
     overflow: hidden;
-    /*TEST*/
-    background-color: cornflowerblue;
+    background-color: #282828;
 }
 
+.container-flex {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.inner-col {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*sezione a sinistra (BRANO)*/
+.brano {
+    align-self: center;
+    flex-shrink: 0;
+}
+
+.inner-col span {
+    align-self: center;
+    padding-left: 10px;
+}
+
+.icons {
+    align-self: center;
+    
+}
+
+.brano .icons {
+    padding-left: 40px;
+}
+/*sezione centrale (PLAY)*/
+
+.play {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.play .inner-col {
+    flex-direction: column;
+    
+}
+
+.icons.central i {
+    color: white;
+    align-self: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.icons.central i:nth-child(3) {
+    font-size: 20px;
+}
+
+.barra-centrale {
+    display: flex;
+    flex-direction: row;
+}
+
+.barra-centrale span {
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+    margin: 0 10px;
+}
+.play .barra {
+   
+    width: 350px;
+    margin: 20px 0;
+}
+
+/*sezione a destra (AUDIO)*/
+.icons.right i {
+    color: white;
+}
+
+.icons i {
+    padding-left: 10px;
+    color: #a3a3a3 ;
+}
+
+.audio {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    flex-shrink: 0;
+}
+
+
+.brano img {
+    height: 35px;
+    width: auto;
+}
+
+.brano span {
+    color: #a3a3a3;
+    font-size: 11px;
+    
+}
+
+/*barre da regolare*/
+.barra {
+    margin: 0 30px;
+    align-self: center;
+    width: 200px;
+    height: 4px;
+    background-color: #a3a3a3;
+    border-radius: 30px;
+}
+
+.barretta {
+    
+    align-self: center;
+    width: 80px;
+    height: 4px;
+    background-color: white;
+    border-radius: 30px;
+}
