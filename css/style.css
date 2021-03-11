@@ -12,6 +12,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+img {
+    width: 100%;
+}
+
 .upgrade {
     text-align: right;
     text-transform: uppercase;
@@ -73,13 +77,45 @@ nav a {
 }
 
 .logo {
+    height: 70px;
+    
     /*TEST*/
     background-color: deepskyblue;
 }
 
+.logo img {
+    height: 50px;
+    margin-top: 10px;
+    padding: 10px 0;
+    
+    
+}
+
 .main-links {
+    
+    
      /*TEST*/
      background-color: pink;
+}
+
+
+.main-links a {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.main-links img {
+    justify-content: flex-start;
+    height: 20px;
+    width: 20px;
+}
+
+.main-links span {
+    font-size: 13px;
+    align-self: center;
+    padding-left: 8px;
 }
 
 .playlist {
