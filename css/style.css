@@ -244,14 +244,31 @@ nav a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
+.album {
+    width: calc(100% / 6 );
+}
+
+/*album in cornice rotonda*/
+.image-container.round img {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.image-container.round:hover .after {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: block;
+    background: rgba(0, 0, 0, .6);
+}
 /*LAYOVER COMMON*/
 .image-container {
     position: relative;
-    width: auto;
-    height: 120px;
+    width: 120px;
+    height: auto;
 }
 .image-container .after {
     position: absolute;
@@ -305,10 +322,25 @@ nav a {
 
 
 /*MEDIA QUERY*/
+@media screen and (max-width: 992px) {
+
+    .album {
+        width: calc(100% / 4 );
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .album {
+        width: calc(100% / 2 );
+    }
+}
+
 @media screen and (min-width: 480px) {
     .logo img:nth-child(2) {
         display: none;
     }
+
 }
 @media screen and (max-width: 480px) {
 
@@ -345,7 +377,15 @@ nav a {
         width: calc(100% - 60px);
     }
 
+    .album {
+        width: calc(100% / 2 );
+    }
+
 }
+
+
+
+
 
 
 /*FOOTER*/
