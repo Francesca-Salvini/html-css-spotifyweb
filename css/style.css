@@ -39,6 +39,11 @@ img {
     
 }
 
+.upgrade a {
+    text-decoration: none;
+    color: white;
+}
+
 .upgrade span {
     border: 1px solid white;
     border-radius: 20px;
@@ -53,8 +58,7 @@ img {
     width: 100%;
     height: 100vh;
 
-    /*TEST*/
-    background-color: aquamarine;
+   
 }
 
 .container-flex i {
@@ -64,8 +68,7 @@ img {
 /*MAIN*/
 main {
     height: calc(100% - 85px);
-    /*TEST*/
-    background-color: chocolate;
+    
 }
 
 /*Nav*/
@@ -110,8 +113,7 @@ nav a {
 .main-links a {
     display: flex;
     flex-direction: row;
-    
-    padding-bottom: 5px;
+    padding: 5px 0;
 }
 
 .main-links img {
@@ -185,7 +187,7 @@ nav a {
 .profile {
     display: flex;
     flex-direction: row;
-    padding-top: 10px;
+    padding: 10px 0;
     border-top: 1px solid #a3a3a3 ;
 }
 
@@ -234,6 +236,7 @@ nav a {
     text-transform: uppercase;
     font-size: 13px;
     padding: 0 10px;
+    position: relative;
 }
 
 .recently-played h4 {
@@ -246,34 +249,117 @@ nav a {
     width: auto;
 }
 
-.album {
-    width: fit-content;
+.container_albums {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
 }
+
+.albums {
+    width: 120px;
+}
+
+/*LAYOVER COMMON*/
+.image-container {
+    position: relative;
+    width: auto;
+    height: 120px;
+}
+.image-container .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    color: #FFF;
+}
+
+.after i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+.image-container:hover .after {
+    display: block;
+    background: rgba(0, 0, 0, .6);
+}
+/*FINE LAYOVER*/
+
 .album .text {
+    width: 120px;
     color: white;
     font-size: 10px;
     font-weight: 600;
     text-align: center;
-    margin-top: 10px 0;
+    margin-top: 20px ;
 }
 
-.album .text.subtitle {
+
+
+.text.subtitle {
     color: #76787d;
     margin-top: 3px;
 }
 
-@media screen and (max-width: 767px) {
+.recently-played p {
+    font-size: 11px ;
+    
+}
+
+#jon-doe {
+    padding-top: 15px 0;
+    padding-bottom: 0;
+}
+
+.text.subtitle.sections {
+    padding-bottom: 15px;
+}
+
+
+@media screen and (min-width: 480px) {
+    .logo img:nth-child(2) {
+        display: none;
+    }
+}
+@media screen and (max-width: 480px) {
 
     nav {
-        width: 80px;
+        width: 60px;
+    }
+
+    .logo img:first-child {
+        display: none;
+    }
+
+    .main-links span {
+        display: none ;
+    }
+
+    .playlist {
+        display: none;
+    }
+
+    .install span {
+        display: none;
+        
+    }
+
+    .install .profile {
+        border: none;
     }
 
     .main-content {
-        width: calc(100% - 80px);
+        width: calc(100% - 60px);
     }
 
     .upgrade {
-        width: calc(100% - 80px);
+        width: calc(100% - 60px);
     }
 
 }
@@ -410,4 +496,55 @@ footer {
     height: 4px;
     background-color: white;
     border-radius: 30px;
+    position: relative;
 }
+
+.trascina {
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    right: 0;
+    top: -2px;
+    background-color: white;
+    border-radius: 50%;
+
+}
+/*HOVER*/
+
+a:hover, .main_navbar ul li a:hover{
+    color: white;
+    font-weight: 600;
+}
+
+a:hover {
+    border-left: 2px solid #adfd30;
+    padding-left: 10px;
+}
+
+.main_navbar ul li a:hover {
+    border-left: none;
+}
+
+.upgrade a:hover {
+    border-left: none;
+}
+
+.main_navbar ul li a:hover::after {
+    
+    content: ' ';
+    text-decoration: none;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    margin-left: 25%;
+    border-bottom: solid 2px #adfd30;
+    padding-top: 3px;
+
+}
+
+.barretta:hover {
+    background-color: #adfd30 ;
+    
+}
+
