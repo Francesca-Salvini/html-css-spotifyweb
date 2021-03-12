@@ -36,7 +36,6 @@ img {
     right: 0;
     color: white;
     background-color: rgba(0, 0, 0, 0.3);
-    
 }
 
 .upgrade a {
@@ -76,6 +75,7 @@ main {
     display: flex;
     flex-direction: column;
     height: 100%;
+    
 }
 
 nav {
@@ -84,7 +84,7 @@ nav {
     height: 100%;
     width: 220px;
     overflow: hidden;
-    /* overflow-y: auto; */
+    overflow-y: auto;
 
    
 }
@@ -134,6 +134,7 @@ nav a {
     overflow: hidden;
     color: #a3a3a3;
     padding-top: 10px;
+    
     
 }
 
@@ -256,10 +257,6 @@ nav a {
     justify-content: space-between;
     
     
-}
-
-.albums {
-    width: 120px;
 }
 
 /*LAYOVER COMMON*/
@@ -516,9 +513,8 @@ a:hover, .main_navbar ul li a:hover{
     font-weight: 600;
 }
 
-a:hover {
-    border-left: 2px solid #adfd30;
-    padding-left: 10px;
+footer a:hover i {
+    color: white;
 }
 
 .main_navbar ul li a:hover {
@@ -528,8 +524,18 @@ a:hover {
 .upgrade a:hover {
     border-left: none;
 }
+.upgrade a:hover span {
+    font-weight: 600;
+    font-size: 11px;
+}
 
-.main_navbar ul li a:hover::after {
+.barretta:hover {
+    background-color: #adfd30 ;
+}
+
+
+/*EVIDENZIATO*/
+.main_navbar ul li:first-child a::after {
     
     content: ' ';
     text-decoration: none;
@@ -543,8 +549,9 @@ a:hover {
 
 }
 
-.barretta:hover {
-    background-color: #adfd30 ;
-    
+.main-links li:first-child a {
+    border-left: 2px solid #adfd30 ;
+    padding-left: 10px;
 }
+
 
