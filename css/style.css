@@ -68,6 +68,7 @@ img {
 /*MAIN*/
 main {
     height: calc(100% - 85px);
+    overflow: hidden;
     
 }
 
@@ -236,8 +237,8 @@ nav a {
     padding: 30px 0;
 }
 .recently-played .album img {
-    height: 120px;
-    width: auto;
+    height: auto;
+    width: 100%;
 }
 
 .container_albums {
@@ -247,19 +248,20 @@ nav a {
 }
 
 .album {
-    width: calc(100% / 6 );
+    width: calc((100% / 6) - 10px );
+    margin: 0 5px;
 }
 
 /*album in cornice rotonda*/
 .image-container.round img {
-    width: 120px;
+    width: 100%;
     height: auto;
     border-radius: 50%;
 }
 
 .image-container.round:hover .after {
-    height: 120px;
-    width: 120px;
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
     display: block;
     background: rgba(0, 0, 0, .6);
@@ -267,7 +269,7 @@ nav a {
 /*LAYOVER COMMON*/
 .image-container {
     position: relative;
-    width: 120px;
+    width: 100%;
     height: auto;
 }
 .image-container .after {
@@ -294,7 +296,7 @@ nav a {
 /*FINE LAYOVER*/
 
 .album .text {
-    width: 120px;
+    width: 100%;
     color: white;
     font-size: 10px;
     font-weight: 600;
@@ -325,14 +327,14 @@ nav a {
 @media screen and (max-width: 992px) {
 
     .album {
-        width: calc(100% / 4 );
+        width: calc((100% / 4) - 10px );
     }
 }
 
 @media screen and (max-width: 768px) {
 
     .album {
-        width: calc(100% / 2 );
+        width: calc((100% / 2) - 10px );
     }
 }
 
@@ -378,7 +380,7 @@ nav a {
     }
 
     .album {
-        width: calc(100% / 2 );
+        width: calc((100% / 2) - 10px );
     }
 
 }
@@ -477,6 +479,10 @@ footer {
 }
 
 /*sezione a destra (AUDIO)*/
+.icons.right {
+    display: flex;
+}
+
 .icons.right i {
     color: white;
 }
